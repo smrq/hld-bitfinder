@@ -6,5 +6,6 @@ module.exports = function findMissing(has, all) {
 			result.push(all[key]);
 		}
 	}
+	result.sort();
 	return result;
 }
