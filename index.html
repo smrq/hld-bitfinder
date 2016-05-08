@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Hyper Light Drifter Bitfinder &mdash; by smrq</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/lumen/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<style>
+			textarea { resize: none; }
+		</style>
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<ul class="nav navbar-nav">
+					<div class="navbar-header">
+						<a href="#" class="navbar-brand">Hyper Light Drifter Bitfinder &mdash; by smrq</a>
+					</div>
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Find those missing gearbits and keys!</h2>
+					<p>Paste the contents of your save file here.</p>
+					<p>You can find your save files in the directory: <code>C:\Users\&lt;user&gt;\AppData\Local\HyperLightDrifter</code>.</p>
+					<p>The contents should be a long string of letters, numbers, plus signs, possibly with equals signs at the end.  (This is called <a href="https://en.wikipedia.org/wiki/Base64">base64 encoding.</a>)</p>
+					<textarea class="form-control" id="save-input" placeholder="Paste your save here!"></textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Results</h2>
+					<div id="save-output">
+						<p>Paste a save file to get your results.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="bundle.js"></script>
+	</body>
+</html>

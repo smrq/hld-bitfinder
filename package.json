@@ -1,0 +1,16 @@
+{
+  "name": "hld-bitfinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify src/index.js > bundle.js",
+    "start": "http-server ."
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "http-server": "^0.9.0"
+  }
+}
