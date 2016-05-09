@@ -21,7 +21,8 @@ function handleInput() {
 		var saveData = parseSave(saveContents);
 		var missingGearbits = findMissing(saveData.cl['0'] || [], gearbitData);
 		var missingKeys = findMissing(saveData.cl['2'] || [], keyData);
-		writeOutput(missingGearbits, missingKeys);
+		var deaths = saveData.charDeaths;
+		writeOutput(missingGearbits, missingKeys, deaths);
 	} catch (err) {
 		writeError(err);
 	}
@@ -31,7 +32,7 @@ function writeError(err) {
 	outputDiv.innerHTML = '<div class="alert alert-danger" role="alert"><strong>Something went wrong!</strong> Did you paste the right thing?</div>'
 }
 
-function writeOutput(missingGearbits, missingKeys) {
+function writeOutput(missingGearbits, missingKeys, deaths) {
 	var html = '<div>';
 
 	if (missingKeys.length) {
@@ -55,6 +56,8 @@ function writeOutput(missingGearbits, missingKeys) {
 	} else {
 		html += '<h3>All gearbits found!</h3>';
 	}
+
+	html += '<p>Also, you\'ve died ' + deaths + ' times.</p>';
 
 	html += '</div>';
 
